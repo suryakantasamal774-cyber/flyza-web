@@ -2,25 +2,27 @@ import React, { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
 import "./Home.css";
 import background from "../assets/background.png";
-import frame20 from "../assets/20 inch frame.jpg";
-import speedybee from "../assets/speedybee 5.jpg";
-import mario from "../assets/mario dc 5.jpg";
+
+// ✅ Import product images
+import frame20 from "../assets/20-inch-frame.jpg";
+import speedybee from "../assets/speedybee-5.jpg";
+import mario from "../assets/mario-dc-5.jpg";
 import volador from "../assets/Volador-VD5-Deadcat-FPV-Frame-Kit_3.jpg";
 import arduino from "../assets/Arduino.png";
 import headphones from "../assets/headphones.jpg";
 import smartwatches from "../assets/smartwatches.jpg";
 
 function Home() {
+  // ✅ Use imported images here
   const products = [
-  { id: 1, name: "20 Inch Frame", image: "/assets/20 inch frame.jpg", price: "$299" },
-  { id: 2, name: "SpeedyBee 5", image: "/assets/speedybee 5.jpg", price: "$349" },
-  { id: 3, name: "Mario DC 5", image: "/assets/mario dc 5.jpg", price: "$329" },
-  { id: 4, name: "Volador VD5 Deadcat FPV Frame", image: "/assets/Volador-VD5-Deadcat-FPV-Frame-Kit_3.jpg", price: "$379" },
-  { id: 5, name: "Arduino Board", image: "/assets/Arduino.png", price: "$59" },
-  { id: 6, name: "Wireless Headphones", image: "/assets/headphones.jpg", price: "$199" },
-  { id: 7, name: "Smartwatches", image: "/assets/smartwatches.jpg", price: "$249" },
-];
-
+    { id: 1, name: "20 Inch Frame", image: frame20, price: "$299" },
+    { id: 2, name: "SpeedyBee 5", image: speedybee, price: "$349" },
+    { id: 3, name: "Mario DC 5", image: mario, price: "$329" },
+    { id: 4, name: "Volador VD5 Deadcat FPV Frame", image: volador, price: "$379" },
+    { id: 5, name: "Arduino Board", image: arduino, price: "$59" },
+    { id: 6, name: "Wireless Headphones", image: headphones, price: "$199" },
+    { id: 7, name: "Smartwatches", image: smartwatches, price: "$249" },
+  ];
 
   const [startIndex, setStartIndex] = useState(0);
 
