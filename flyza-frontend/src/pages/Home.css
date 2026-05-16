@@ -93,6 +93,30 @@ p, li, a {
   color: #fff;
   text-align: center;
 }
+.product-showcase {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.product-container {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  overflow: hidden;
+  transition: transform 0.5s ease-in-out;
+  flex-wrap: nowrap;
+}
+
+.product-card {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  padding: 1rem;
+  width: 180px;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  color: #fff;
+  text-align: center;
+}
 
 .product-card img {
   width: 100%;
@@ -110,3 +134,17 @@ p, li, a {
   font-size: 1rem;
   color: #f1f1f1;
 }
+
+.product-card img {
+  width: 220px;
+  height: 220px;
+  object-fit: contain;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.product-card img:hover {
+  transform: scale(1.05);
+}
+
+

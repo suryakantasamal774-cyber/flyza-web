@@ -1,9 +1,38 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
 import "./Home.css";
 import background from "../assets/background.png";
+import frame20 from "../assets/20 inch frame.jpg";
+import speedybee from "../assets/speedybee 5.jpg";
+import mario from "../assets/mario dc 5.jpg";
+import volador from "../assets/Volador-VD5-Deadcat-FPV-Frame-Kit_3.jpg";
+import arduino from "../assets/Arduino.png";
+import headphones from "../assets/headphones.jpg";
+import smartwatches from "../assets/smartwatches.jpg";
 
 function Home() {
+  const products = [
+  { id: 1, name: "20 Inch Frame", image: "/assets/20 inch frame.jpg", price: "$299" },
+  { id: 2, name: "SpeedyBee 5", image: "/assets/speedybee 5.jpg", price: "$349" },
+  { id: 3, name: "Mario DC 5", image: "/assets/mario dc 5.jpg", price: "$329" },
+  { id: 4, name: "Volador VD5 Deadcat FPV Frame", image: "/assets/Volador-VD5-Deadcat-FPV-Frame-Kit_3.jpg", price: "$379" },
+  { id: 5, name: "Arduino Board", image: "/assets/Arduino.png", price: "$59" },
+  { id: 6, name: "Wireless Headphones", image: "/assets/headphones.jpg", price: "$199" },
+  { id: 7, name: "Smartwatches", image: "/assets/smartwatches.jpg", price: "$249" },
+];
+
+
+  const [startIndex, setStartIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setStartIndex((prev) => (prev + 4) % products.length);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, [products.length]);
+
+  const visibleProducts = products.slice(startIndex, startIndex + 4);
+
   return (
     <div className="home" style={{ backgroundImage: `url(${background})` }}>
       <Navbar />
@@ -16,6 +45,20 @@ function Home() {
           and more, tailored to your needs.
         </p>
         <button className="shop-btn">Start Shopping</button>
+      </section>
+
+      {/* Product showcase box */}
+      <section className="product-showcase box">
+        <h2>Featured Products</h2>
+        <div className="product-container">
+          {visibleProducts.map((product) => (
+            <div key={product.id} className="product-card">
+              <img src={product.image} alt={product.name} />
+              <h3>{product.name}</h3>
+              <p>{product.price}</p>
+            </div>
+          ))}
+        </div>
       </section>
 
       <section className="features box">
