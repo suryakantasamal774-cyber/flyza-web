@@ -1,9 +1,21 @@
-import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
-import "./App.css";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
 
 function App() {
-  return <Home />;
+  return (
+    <Router>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+        {/* Add more routes like /cart, /favorites, etc. */}
+      </Routes>
+    </Router>
+  );
 }
 
 export default App;
