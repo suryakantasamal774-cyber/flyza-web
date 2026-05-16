@@ -3,7 +3,6 @@ import Navbar from "../components/Navbar";
 import "./Home.css";
 import background from "../assets/background.png";
 
-// ✅ Import product images
 import frame20 from "../assets/20inchframe.jpg";
 import speedybee from "../assets/speedybee5.jpg";
 import mario from "../assets/mariodc5.jpg";
@@ -13,7 +12,6 @@ import headphones from "../assets/headphones.jpg";
 import smartwatches from "../assets/smartwatches.jpg";
 
 function Home() {
-  // ✅ Use imported images directly
   const products = [
     { id: 1, name: "20 Inch Frame", image: frame20, price: "$299" },
     { id: 2, name: "SpeedyBee 5", image: speedybee, price: "$349" },
@@ -28,12 +26,16 @@ function Home() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setStartIndex((prev) => (prev + 4) % products.length);
+      setStartIndex((prev) => (prev + 1) % products.length);
     }, 3000);
     return () => clearInterval(interval);
   }, [products.length]);
 
-  const visibleProducts = products.slice(startIndex, startIndex + 4);
+  // Show 4 products at a time
+  const visibleProducts = [
+    ...products.slice(startIndex, startIndex + 4),
+    ...products.slice(0, Math.max(0, (startIndex + 4) - products.length))
+  ];
 
   return (
     <div className="home" style={{ backgroundImage: `url(${background})` }}>
@@ -49,17 +51,25 @@ function Home() {
         <button className="shop-btn">Start Shopping</button>
       </section>
 
-      {/* Product showcase box */}
+      {/* Product showcase with smooth slide */}
       <section className="product-showcase box">
         <h2>Featured Products</h2>
-        <div className="product-container">
-          {visibleProducts.map((product) => (
-            <div key={product.id} className="product-card">
-              <img src={product.image} alt={product.name} />
-              <h3>{product.name}</h3>
-              <p>{product.price}</p>
-            </div>
-          ))}
+        <div className="product-slider">
+          <div
+            className="product-track"
+            style={{
+              transform: `translateX(-${startIndex * 25}%)`,
+              transition: "transform 0.8s ease-in-out"
+            }}
+          >
+            {products.map((product) => (
+              <div key={product.id} className="product-card">
+                <img src={product.image} alt={product.name} />
+                <h3>{product.name}</h3>
+                <p>{product.price}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
