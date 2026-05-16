@@ -8,17 +8,17 @@ function Home() {
     <div className="home" style={{ backgroundImage: `url(${background})` }}>
       <Navbar />
 
-      <section className="hero">
+      <section className="hero box">
         <h1>Welcome to Flyza</h1>
         <p>
-          Your trusted marketplace for <strong>new</strong> and 
-          <strong>pre‑owned products</strong> — drones, electronics, robotics, 
+          Your trusted marketplace for <strong>new</strong> and
+          <strong> pre‑owned products</strong> — drones, electronics, robotics,
           and more, tailored to your needs.
         </p>
         <button className="shop-btn">Start Shopping</button>
       </section>
 
-      <section className="features">
+      <section className="features box">
         <h2>Why Shop With Us?</h2>
         <ul>
           <li>Wide range of categories</li>
@@ -28,7 +28,7 @@ function Home() {
         </ul>
       </section>
 
-      <section className="quick-links">
+      <section className="quick-links box">
         <h2>Explore Categories</h2>
         <div className="links">
           <a href="/categories/drones">🚁 Drones</a>
