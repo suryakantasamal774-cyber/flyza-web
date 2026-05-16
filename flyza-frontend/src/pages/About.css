@@ -8,64 +8,75 @@
   padding: 3rem 2rem;
 }
 
-/* ✅ Darker overlay for contrast */
+/* Overlay for background */
 .about::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.45);
+  background: rgba(0, 0, 0, 0.45); /* darker overlay for contrast */
   backdrop-filter: blur(10px);
   z-index: 0;
 }
 
-/* ✅ Content box styling */
+/* Content wrapper */
 .about-content {
   position: relative;
   z-index: 1;
-  background: rgba(255, 255, 255, 0.95);
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
   max-width: 850px;
   padding: 2.5rem;
-  color: #111;
-  line-height: 1.7;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
   font-family: "Poppins", sans-serif;
 }
 
-/* ✅ Headings */
-.about-content h1 {
-  font-size: 2.5rem;
+/* Section boxes with distinct highlight colors */
+.section-box {
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  padding: 2rem;
+  color: #111; /* ✅ dark text for readability */
+  line-height: 1.7;
+}
+
+/* Different background colors per section */
+.mission {
+  background: #ffeb99; /* soft yellow */
+}
+
+.vision {
+  background: #cce5ff; /* light blue */
+}
+
+.why-choose {
+  background: #d4edda; /* light green */
+}
+
+.section-box h1,
+.section-box h2 {
   margin-bottom: 1rem;
-  color: #000;
   font-weight: 700;
+  color: #000;
 }
 
-.about-content h2 {
-  margin-top: 2rem;
-  color: #0077cc;
-  font-weight: 600;
-}
-
-/* ✅ Paragraphs and lists */
-.about-content p {
-  margin-bottom: 1rem;
+.section-box p,
+.section-box ul {
   font-size: 1.05rem;
   color: #222;
 }
 
-.about-content ul {
+.section-box ul {
   list-style: disc;
   margin-left: 2rem;
-  color: #222;
 }
 
-.about-content li {
+.section-box li {
   margin-bottom: 0.5rem;
 }
 
-/* ✅ Quote box */
+/* Quote box with gradient highlight */
 .quote-box {
-  margin-top: 3rem;
+  margin-top: 2rem;
   padding: 1.5rem;
   background: linear-gradient(135deg, #0077cc, #00b4d8);
   color: #fff;
