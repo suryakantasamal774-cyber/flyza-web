@@ -49,7 +49,7 @@
 }
 
 .why-choose {
-  background: #d4edda; /* light green */
+  background: #c21dec; /* light green */
 }
 
 .section-box h1,
@@ -74,7 +74,7 @@
   margin-bottom: 0.5rem;
 }
 
-/* Quote box with gradient highlight */
+/* Quote box with gradient highlight modifiues */ 
 .quote-box {
   margin-top: 2rem;
   padding: 1.5rem;
