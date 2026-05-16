@@ -35,6 +35,13 @@ export default function About() {
           To become a trusted hub for smart shoppers who value both quality
           and savings, while promoting eco‑friendly choices.
         </p>
+
+        <div className="quote-box">
+          <p className="quote">
+            “Confidentiality builds trust — and trust builds Flyza.”
+          </p>
+          <span className="quote-author">— Suryakanta Samal</span>
+        </div>
       </div>
     </div>
   );

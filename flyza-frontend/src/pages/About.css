@@ -46,3 +46,26 @@
   list-style: disc;
   margin-left: 2rem;
 }
+
+.quote-box {
+  margin-top: 3rem;
+  padding: 1.5rem;
+  background: linear-gradient(135deg, #0077cc, #00b4d8);
+  color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.quote {
+  font-size: 1.3rem;
+  font-style: italic;
+  margin-bottom: 0.5rem;
+}
+
+.quote-author {
+  font-weight: bold;
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
