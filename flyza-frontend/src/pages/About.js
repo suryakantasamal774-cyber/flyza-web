@@ -11,7 +11,7 @@ export default function About() {
         </p>
         <p>
           At Flyza, you can explore both <strong>new</strong> and
-          <strong>pre‑owned products</strong> — from electronics and drones
+          <strong> pre‑owned products</strong> — from electronics and drones
           to robotics and everyday essentials — all tailored to your needs.
         </p>
 
@@ -38,7 +38,7 @@ export default function About() {
 
         <div className="quote-box">
           <p className="quote">
-            “Fly high, shop smart, and soar with confidence.”
+            “Rise above fear and let courage carry you.”
           </p>
           <span className="quote-author">— Flyza</span>
         </div>

@@ -50,11 +50,12 @@
 .quote-box {
   margin-top: 3rem;
   padding: 1.5rem;
-  background: linear-gradient(135deg, #ff6600, #ff9900);
+  background: linear-gradient(135deg, #0077cc, #00b4d8);
   color: #fff;
   border-radius: 10px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   text-align: center;
+  font-family: "Poppins", sans-serif;
 }
 
 .quote {
