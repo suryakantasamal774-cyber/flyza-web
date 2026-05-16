@@ -1,12 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import flyzaLogo from "../assets/flyza-logo.png"; // ✅ your logo file
 import "./Navbar.css";
 
 function Navbar() {
   return (
     <header className="navbar">
       <div className="nav-left">
-        <Link to="/" title="Home">🏠</Link>
+        {/* ✅ replaced home icon with logo */}
+        <Link to="/" className="logo-link">
+          <img src={flyzaLogo} alt="Flyza Logo" className="nav-logo" />
+        </Link>
         <Link to="/categories" title="Categories">☰</Link>
       </div>
 

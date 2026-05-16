@@ -19,18 +19,29 @@
   gap: 15px;
 }
 
-.nav-left button,
-.nav-right button {
+/* ✅ logo styling */
+.nav-logo {
+  height: 40px;
+  transition: transform 0.3s ease;
+}
+
+.nav-logo:hover {
+  transform: scale(1.05);
+}
+
+.nav-left a,
+.nav-right a {
   background: none;
   border: none;
   font-size: 22px;
   color: white;
   cursor: pointer;
+  text-decoration: none;
   transition: transform 0.2s ease;
 }
 
-.nav-left button:hover,
-.nav-right button:hover {
+.nav-left a:hover,
+.nav-right a:hover {
   transform: scale(1.2);
 }
 
