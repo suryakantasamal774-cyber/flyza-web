@@ -7,7 +7,7 @@ import background from "../assets/background.png";
 import frame20 from "../assets/20inchframe.jpg";
 import speedybee from "../assets/speedybee5.jpg";
 import mario from "../assets/mariodc5.jpg";
-import volador from "../assets/Volador-VDS-Deadcat-FPV-Frame-Kit_3.jpg";
+import volador from "../assets/VoladorVD.jpg";
 import arduino from "../assets/Arduino.png";
 import headphones from "../assets/headphones.jpg";
 import smartwatches from "../assets/smartwatches.jpg";
