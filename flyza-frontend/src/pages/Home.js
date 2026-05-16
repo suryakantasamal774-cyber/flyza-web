@@ -4,16 +4,16 @@ import "./Home.css";
 import background from "../assets/background.png";
 
 // ✅ Import product images
-import frame20 from "../assets/20-inch-frame.jpg";
-import speedybee from "../assets/speedybee-5.jpg";
-import mario from "../assets/mario-dc-5.jpg";
-import volador from "../assets/Volador-VD5-Deadcat-FPV-Frame-Kit_3.jpg";
+import frame20 from "../assets/20inchframe.jpg";
+import speedybee from "../assets/speedybee5.jpg";
+import mario from "../assets/mariodc5.jpg";
+import volador from "../assets/Volador-VDS-Deadcat-FPV-Frame-Kit_3.jpg";
 import arduino from "../assets/Arduino.png";
 import headphones from "../assets/headphones.jpg";
 import smartwatches from "../assets/smartwatches.jpg";
 
 function Home() {
-  // ✅ Use imported images here
+  // ✅ Use imported images directly
   const products = [
     { id: 1, name: "20 Inch Frame", image: frame20, price: "$299" },
     { id: 2, name: "SpeedyBee 5", image: speedybee, price: "$349" },
