@@ -31,12 +31,6 @@ function Home() {
     return () => clearInterval(interval);
   }, [products.length]);
 
-  // Show 4 products at a time
-  const visibleProducts = [
-    ...products.slice(startIndex, startIndex + 4),
-    ...products.slice(0, Math.max(0, (startIndex + 4) - products.length))
-  ];
-
   return (
     <div className="home" style={{ backgroundImage: `url(${background})` }}>
       <Navbar />
@@ -51,7 +45,7 @@ function Home() {
         <button className="shop-btn">Start Shopping</button>
       </section>
 
-      {/* Product showcase with smooth slide */}
+      {/* Product showcase with smooth sliding */}
       <section className="product-showcase box">
         <h2>Featured Products</h2>
         <div className="product-slider">
